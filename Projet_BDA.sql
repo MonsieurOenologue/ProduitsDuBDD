@@ -44,8 +44,6 @@ CREATE OR REPLACE type Client_t AS object
 CREATE OR REPLACE type Vins_t AS object
 (
 	nom string,
-	q_raisin number,
-	q_eau number,
 	p_alcool number,
 	appellation VARCHAR(50),
 	annee number,
