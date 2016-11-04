@@ -1,6 +1,5 @@
-
-#Creation of the object table
-CREATE OR REPLACE type Pain_t AS object 
+/*Creation of the object table*/
+CREATE OR REPLACE type Pain_t AS object
 (
 	nom VARCHAR(50),
 	q_farine number,
@@ -95,6 +94,6 @@ CREATE OR REPLACE type Plateau_t AS object
 )
 /;
 
-#Creation of the tables
+/*Creation of the tables*/
 CREATE TABLE Client OF Client_t (CONSTRAINT PK_Client primary KEY(nom));
 CREATE TABLE Plateau of Plateau_t;
