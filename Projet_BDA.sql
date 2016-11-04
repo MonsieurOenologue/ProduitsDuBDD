@@ -1,7 +1,7 @@
 CREATE OR REPLACE type Pain_t AS object
 (
 	nom VARCHAR(50),
-	t_cuisson VARCHAR(50)
+	t_cuisson number
 );
 /
 
@@ -15,7 +15,7 @@ CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 CREATE OR REPLACE type Fromage_t AS object
 (
 	nom VARCHAR(50),
-	t_lait number,
+	t_lait VARCHAR(50),
 	prix number
 );
 /
@@ -38,9 +38,8 @@ CREATE OR REPLACE type Client_t AS object
 
 CREATE OR REPLACE type Vins_t AS object
 (
-	nom VARCHAR(50),
-	p_alcool number,
 	appellation VARCHAR(50),
+	p_alcool number,
 	annee number,
 	prix number
 );
@@ -90,5 +89,5 @@ CREATE OR REPLACE type Repas_t AS object
 );
 /
 
-CREATE TABLE Client OF Client_t (CONSTRAINT PK_Client primary KEY(nom));
+CREATE TABLE Client OF Client_t;
 CREATE TABLE Repas of Repas_t;
