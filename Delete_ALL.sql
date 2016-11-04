@@ -1,0 +1,14 @@
+DROP TYPE Pain_t FORCE;
+DROP TYPE Pain_Special_t FORCE;
+DROP TYPE Fromage_t FORCE;
+DROP TYPE Adresse_t FORCE;
+DROP TYPE Client_t FORCE;
+DROP TYPE Vins_t FORCE;
+DROP TYPE Charcuterie_t FORCE;
+DROP TYPE Jambon_t FORCE;
+DROP TYPE Pate_t FORCE;
+DROP TYPE Saucisse_t FORCE;
+DROP TYPE Repas_t FORCE;
+
+DROP TABLE Client;
+DROP TABLE Repas;
