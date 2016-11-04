@@ -4,6 +4,7 @@ CREATE OR REPLACE type Pain_t AS object
 	nom VARCHAR(50),
 	t_cuisson VARCHAR(50),
 	Pain_Special Pain_Special_t
+)
 /;
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
