@@ -2,14 +2,13 @@ CREATE OR REPLACE type Pain_t AS object
 (
 	nom VARCHAR(50),
 	t_cuisson number,
-	prix number
-);
+	prix number) NOT FINAL;
 /
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 (
-	ingredient VARCHAR(50))
-	NOT FINAL;;
+	ingredient VARCHAR(50)
+);
 /
 
 CREATE OR REPLACE type Fromage_t AS object
