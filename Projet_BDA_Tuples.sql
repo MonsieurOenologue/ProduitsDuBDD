@@ -42,7 +42,7 @@ INSERT INTO Repas VALUES
     Charcuterie_t(100, 'Italie - Toscane', 3, 'Saucisse', 5)
 );
 /
-INSERT INTO Client VALUES(Client_t('Julien', 0743238976, Adresse_t('20 Rue de la Croix Verte')));
+INSERT INTO Client VALUES(Client_t('Julien', 0743238976, Adresse_t('20 Rue de la Croix Verte', 34000, 'Montpellier')));
 INSERT INTO Repas VALUES
 (
     25,

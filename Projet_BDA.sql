@@ -8,7 +8,7 @@ CREATE OR REPLACE type Pain_t AS object
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 (
-	ingredient VARCHAR(50),
+	ingredient VARCHAR(50)
 );
 /
 
