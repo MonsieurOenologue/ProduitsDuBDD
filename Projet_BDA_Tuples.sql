@@ -15,7 +15,7 @@ INSERT INTO Repas VALUES
     25,
     Pain_t('Baguette', 50, 5),
     Fromage_t('Mimolette', 'Vache', 5.92),
-    Client_t('Chloé', 0656333609, Adresse_t('22 rue de la Valsière', 34000, 'Montpellier')),
+    Client_t('Chloé', 0656333609, Adresse_t('22 rue de la Vaslière', 34000, 'Montpellier')),
     Vin_t('Château Vieux Robin, Cru Bourgeois', 9, 1999, 11),
     Charcuterie_t(75, 'France - Bretagne', 3,'Saucisse', 5)
 );
