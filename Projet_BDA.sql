@@ -2,13 +2,12 @@ CREATE OR REPLACE type Pain_t AS object
 (
 	nom VARCHAR(50),
 	t_cuisson number,
-	prix number
-);
+	prix number) NOT FINAL;
 /
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 (
-	ingredient VARCHAR(50),
+	ingredient VARCHAR(50)
 );
 /
 
@@ -51,8 +50,7 @@ CREATE OR REPLACE type Charcuterie_t AS object
 	provenance VARCHAR(50),
 	poids number,
 	t_viande VARCHAR(50),
-	prix number
-);
+	prix number) NOT FINAL;
 /
 
 CREATE OR REPLACE type Jambon_t UNDER Charcuterie_t
@@ -69,7 +67,7 @@ CREATE OR REPLACE type Pate_t UNDER Charcuterie_t
 
 CREATE OR REPLACE type Saucisse_t UNDER Charcuterie_t
 (
-	taille number;
+	taille number
 );
 /
 
