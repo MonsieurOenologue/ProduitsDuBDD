@@ -42,3 +42,14 @@ INSERT INTO Repas VALUES
     Charcuterie_t(100, 'Italie - Toscane', 3, 'Saucisse', 5)
 );
 /
+INSERT INTO Client VALUES(Client_t('Julien', 0743238976, Adresse_t('20 Rue de la Croix Verte')));
+INSERT INTO Repas VALUES
+(
+    25,
+    Pain_Special_t('Baguette', 50, 5, 'Noisettes'),
+    Fromage_t('Fromage de chèvre', 'Chèvre', 4.43),
+    Client_t('Julien', 0743238976, Adresse_t('20 Rue de la Croix Verte', 34000, 'Montpellier')),
+    Vin_t('Château Vieux Robin, Cru Bourgeois', 11, 1999, 11),
+    Charcuterie_t(100, 'Italie - Toscane', 3, 'Saucisse', 6)
+);
+/
