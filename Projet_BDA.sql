@@ -12,12 +12,7 @@ CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 	ingredient VARCHAR(50)
 );
 /
-CREATE OR REPLACE type List_of_fromages AS VARRAY(50) OF Fromage_t;
-/
-CREATE OR REPLACE type List_of_fromages_t AS object
-(
-	fromage List_of_fromages
-);
+CREATE OR REPLACE type List_of_fromages AS TABLE OF Fromage_t;
 /
 CREATE OR REPLACE type Fromage_t AS object
 (
@@ -27,7 +22,8 @@ CREATE OR REPLACE type Fromage_t AS object
 	quantite number
 );
 /
-
+CREATE OR REPLACE type List_of_fromages_t AS TABLE OF Fromage_t;
+/
 CREATE OR REPLACE type Adresse_t AS object
 (
 	rue VARCHAR(50),
@@ -91,8 +87,8 @@ CREATE OR REPLACE type Repas_t AS object
 	Client Client_t,
 	Vin Vin_t,
 	Charcuterie Charcuterie_t
-);
+)
 /
 
 CREATE TABLE Client OF Client_t;
-CREATE TABLE Repas of Repas_t;
+CREATE TABLE Repas of Repas_t NESTED TABLE Fromage STORE AS Tab_fromages;
