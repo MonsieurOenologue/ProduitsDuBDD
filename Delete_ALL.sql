@@ -9,7 +9,6 @@ DROP TYPE Charcuterie_t FORCE;
 DROP TYPE Jambon_t FORCE;
 DROP TYPE Pate_t FORCE;
 DROP TYPE Saucisse_t FORCE;
-DROP TYPE Repas_t FORCE;
 
 DROP TABLE Client;
 DROP TABLE Repas;

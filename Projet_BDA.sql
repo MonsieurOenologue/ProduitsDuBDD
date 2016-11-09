@@ -83,18 +83,22 @@ CREATE OR REPLACE type Saucisse_t UNDER Charcuterie_t
 );
 /
 
-CREATE OR REPLACE type Repas_t AS object
+
+CREATE TABLE Client OF Client_t;
+
+CREATE TABLE Repas
 (
+	id_repas number,
 	prixTot number,
-	Pain List_of_pain_t,
+	Pain List_of_Pain_t,
 	Fromage List_of_fromages_t,
 	Client Client_t,
 	Vin List_of_vins_t,
-	Charcuterie List_of_charcuterie_t
-);
-/
+	Charcuterie List_of_Charcuterie_t
+)
+NESTED TABLE Pain STORE AS Tab_Pains
+NESTED TABLE Fromage STORE AS Tab_Fromages
+NESTED TABLE Vin STORE AS Tab_Vins
+NESTED TABLE Charcuterie STORE AS Tab_Charcuteries;
 
-CREATE TABLE Client OF Client_t;
-CREATE TABLE Repas OF Repas_t
-NESTED TABLE Pain STORE AS Tab_Pains;
 
