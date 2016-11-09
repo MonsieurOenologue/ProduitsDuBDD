@@ -12,8 +12,6 @@ CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 	ingredient VARCHAR(50)
 );
 /
-CREATE OR REPLACE type List_of_fromages AS TABLE OF Fromage_t;
-/
 CREATE OR REPLACE type Fromage_t AS object
 (
 	nom VARCHAR(50),
