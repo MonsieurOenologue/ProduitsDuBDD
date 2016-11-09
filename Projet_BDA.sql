@@ -97,5 +97,6 @@ CREATE TABLE Client OF Client_t;
 CREATE TABLE Repas of Repas_t
 NESTED TABLE Fromage STORE AS Tab_fromages
 (NESTED TABLE Vin STORE AS Tab_vin)
-(NESTED TABLE Charcuterie STORE AS Tab_Charcuterie)
+(NESTED TABLE Charcuterie STORE AS Tab_charcuterie)
 (NESTED TABLE Pain STORE AS Tab_pain);
+/
