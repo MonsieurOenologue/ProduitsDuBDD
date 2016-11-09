@@ -6,6 +6,7 @@ CREATE OR REPLACE type Pain_t AS object
 	prixKg number,
 	quantite number) NOT FINAL;
 /
+CREATE OR REPLACE type List_of_pain_t AS TABLE OF Pain_t;
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 (
@@ -48,6 +49,8 @@ CREATE OR REPLACE type Vin_t AS object
 	quantite number
 );
 /
+CREATE OR REPLACE type List_of_vins_t AS TABLE OF Vin_t;
+/
 
 CREATE OR REPLACE type Charcuterie_t AS object
 (
@@ -56,6 +59,8 @@ CREATE OR REPLACE type Charcuterie_t AS object
 	poids number,
 	prixKg number,
 	quantite number) NOT FINAL;
+/
+CREATE OR REPLACE type List_of_charcuterie_t AS TABLE OF Charcuterie_t;
 /
 
 CREATE OR REPLACE type Jambon_t UNDER Charcuterie_t
@@ -80,13 +85,17 @@ CREATE OR REPLACE type Saucisse_t UNDER Charcuterie_t
 CREATE OR REPLACE type Repas_t AS object
 (
 	prixTot number,
-	Pain Pain_t,
+	Pain List_of_pain_t,
 	Fromage List_of_fromages_t,
 	Client Client_t,
-	Vin Vin_t,
-	Charcuterie Charcuterie_t
+	Vin List_of_vins_t,
+	Charcuterie List_of_charcuterie_t
 )
 /
 
 CREATE TABLE Client OF Client_t;
-CREATE TABLE Repas of Repas_t NESTED TABLE Fromage STORE AS Tab_fromages;
+CREATE TABLE Repas of Repas_t
+NESTED TABLE Fromage STORE AS Tab_fromages
+NESTED TABLE Vin STORE AS Tab_vin
+NESTED TABLE Charcuterie as Tab_Charcuterie
+NESTED TABLE Pain AS Tab_pain;
