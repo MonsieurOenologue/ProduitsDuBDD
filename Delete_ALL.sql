@@ -1,5 +1,6 @@
 DROP TYPE Pain_t FORCE;
 DROP TYPE Pain_Special_t FORCE;
+DROP TYPE List_of_fromages_t FORCE;
 DROP TYPE Fromage_t FORCE;
 DROP TYPE Adresse_t FORCE;
 DROP TYPE Client_t FORCE;
