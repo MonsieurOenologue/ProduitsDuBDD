@@ -91,7 +91,7 @@ CREATE OR REPLACE type Repas_t AS object
 	Client Client_t,
 	Vin List_of_vins_t,
 	Charcuterie List_of_charcuterie_t
-)
+);
 /
 
 CREATE TABLE Client OF Client_t;
