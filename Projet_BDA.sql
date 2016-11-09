@@ -7,6 +7,7 @@ CREATE OR REPLACE type Pain_t AS object
 	quantite number) NOT FINAL;
 /
 CREATE OR REPLACE type List_of_pain_t AS TABLE OF Pain_t;
+/
 
 CREATE OR REPLACE type Pain_Special_t UNDER Pain_t
 (
