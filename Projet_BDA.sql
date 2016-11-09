@@ -94,6 +94,6 @@ CREATE OR REPLACE type Repas_t AS object
 /
 
 CREATE TABLE Client OF Client_t;
-CREATE TABLE Repas OF Repas_t()
+CREATE TABLE Repas OF Repas_t
 NESTED TABLE Fromage STORE AS Tab_fromage;
 
